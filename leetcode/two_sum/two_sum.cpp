@@ -25,5 +25,8 @@ public:
 int main() {
     Solution s;
     vector<int> nums ={2,7,11,15};
-    s.twoSum(nums, 9);
+    vector<int> result = s.twoSum(nums, 9);
+    for(int r : result) {
+        std::cout << r << " ";
+    }
 }

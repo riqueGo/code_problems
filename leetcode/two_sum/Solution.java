@@ -1,3 +1,5 @@
+package two_sum;
+
 import java.util.HashMap;
 
 class Solution {
@@ -16,6 +18,9 @@ class Solution {
 
     public static void main(String[] args) {
         Solution s = new Solution();
-        s.twoSum(new int[]{2,7,11,15}, 9);
+        int[] result = s.twoSum(new int[]{2,7,11,15}, 9);
+        for(int r : result) {
+            System.out.print(r + " ");
+        }
     }
 }
