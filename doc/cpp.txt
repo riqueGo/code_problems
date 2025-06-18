@@ -1,0 +1,281 @@
+# C++ Language Documentation
+
+## Data Structure
+
+========================================================================================================
+
+### Array
+
+#### Constructor
+
+int arr1[5];                    // uninitialized
+int arr2[5] = {1, 2, 3, 4, 5};  // initialized
+
+========================================================================================================
+
+### Vector
+
+#include <vector>
+using std::vector;
+
+#### Constructor
+
+vector<int> v1;                 // empty vector
+vector<int> v2(n);              // vector of size n, default-initialized
+vector<int> v3(n, 0);           // vector of size n, all elements = 0
+vector<int> v4 = {1, 2, 3, 4};  // initializer list
+
+
+#### Functions
+
+v1.push_back(7);                            // add element at end
+v1.pop_back();                              // remove last element
+v1.size();                                  // get number of elements
+v1.empty();                                 // check if empty
+v1.clear();                                 // remove all elements
+v1[0];                                      // access element by index
+v1.at(0);                                   // access with bounds checking
+v1.front();                                 // first element
+v1.back();                                  // last element
+v1.insert(v1.begin(), 10);                  // insert 10 at the beginning of the vector
+v1.insert(v1.end(), v2.begin(), v2.end());  // add all elements of v2 to end of v1
+v1.reserve(v1.size() + v2.size());          // (optional) reserve space before inserting for efficiency
+v1 = v2;                                    // copy v2 into v1 (v1 becomes a copy of v2)
+
+========================================================================================================
+
+### Unordered Map
+
+#include <unordered_map>
+using std::unordered_map;
+
+#### Constructor
+unordered_map<int, int> m1;                                 // empty map
+unordered_map<std::string, int> m2 = {{"a", 1}, {"b", 2}};  // initializer list
+
+#### Functions
+
+m1[key] = value;            // insert or update value for key
+m1.at(key);                 // access value at key (throws if not found)
+m1.find(key);               // returns iterator to key or m1.end()
+m1.count(key);              // returns 1 if key exists, 0 otherwise
+m1.erase(key);              // remove key-value pair
+m1.size();                  // number of elements
+m1.empty();                 // check if empty
+m1.clear();                 // remove all elements
+
+========================================================================================================
+
+### Map
+
+#include <map>
+using std::map;
+
+#### Constructor
+
+map<int, int> m1;                                 // empty map
+map<std::string, int> m2 = {{"a", 1}, {"b", 2}};  // initializer list
+
+#### Functions
+
+m1[key] = value;            // insert or update value for key
+m1.at(key);                 // access value at key (throws if not found)
+m1.find(key);               // returns iterator to key or m1.end()
+m1.count(key);              // returns 1 if key exists, 0 otherwise
+m1.erase(key);              // remove key-value pair
+m1.size();                  // number of elements
+m1.empty();                 // check if empty
+m1.clear();                 // remove all elements
+m1.begin();                 // iterator to first element (smallest key)
+m1.end();                   // iterator past last element
+m1.lower_bound(key);        // iterator to first element not less than key
+m1.upper_bound(key);        // iterator to first element greater than key
+
+#### Iteration
+
+// Range-based for loop
+for (const auto& [key, value] : m1) {
+    // use key and value
+}
+
+// Iterator-based loop
+for (map<int, int>::iterator it = m1.begin(); it != m1.end(); ++it) {
+    // use it->first (key), it->second (value)
+}
+
+// Using auto keyword (C++11 and later)
+for (auto it = m1.begin(); it != m1.end(); ++it) {
+    // use it->first (key), it->second (value)
+}
+
+========================================================================================================
+
+### Unordered Set
+
+#include <unordered_set>
+using std::unordered_set;
+
+#### Constructor
+
+unordered_set<int> s1;                      // empty set
+unordered_set<std::string> s2 = {"a", "b"}; // initializer list
+
+#### Functions
+
+s1.insert(10);           // insert element
+s1.erase(10);            // remove element
+s1.count(10);            // returns 1 if element exists, 0 otherwise
+s1.find(10);             // returns iterator to element or s1.end()
+s1.size();               // number of elements
+s1.empty();              // check if empty
+s1.clear();              // remove all elements
+
+========================================================================================================
+
+### Set
+
+#include <set>
+using std::set;
+
+#### Constructor
+
+set<int> s1;                      // empty set
+set<std::string> s2 = {"a", "b"}; // initializer list
+
+#### Functions
+
+s1.insert(10);           // insert element
+s1.erase(10);            // remove element
+s1.count(10);            // returns 1 if element exists, 0 otherwise
+s1.find(10);             // returns iterator to element or s1.end()
+s1.size();               // number of elements
+s1.empty();              // check if empty
+s1.clear();              // remove all elements
+s1.begin();              // iterator to first element (smallest)
+s1.end();                // iterator past last element
+s1.lower_bound(10);      // iterator to first element not less than 10
+s1.upper_bound(10);      // iterator to first element greater than 10
+
+#### Iteration
+
+// Range-based for loop
+for (int x : s1) {
+    // use x
+}
+
+// Iterator-based loop
+for (set<int>::iterator it = s1.begin(); it != s1.end(); ++it) {
+    // use *it
+}
+
+// Using auto keyword (C++11 and later)
+for (auto it = s1.begin(); it != s1.end(); ++it) {
+    // use *it
+}
+
+========================================================================================================
+
+### Deque
+
+#include <deque>
+using std::deque;
+
+#### Constructor
+
+deque<int> d1;                      // empty deque
+deque<int> d2(n);                   // deque of size n, default-initialized
+deque<int> d3(n, 0);                // deque of size n, all elements = 0
+deque<int> d4 = {1, 2, 3, 4};       // initializer list
+
+#### Functions
+
+d1.push_back(7);                            // add element at end
+d1.push_front(8);                           // add element at front
+d1.pop_back();                              // remove last element
+d1.pop_front();                             // remove first element
+d1.size();                                  // get number of elements
+d1.empty();                                 // check if empty
+d1.clear();                                 // remove all elements
+d1[0];                                      // access element by index
+d1.at(0);                                   // access with bounds checking
+d1.front();                                 // first element
+d1.back();                                  // last element
+d1.insert(d1.begin(), 10);                  // insert 10 at the beginning
+d1.insert(d1.end(), d2.begin(), d2.end());  // add all elements of d2 to end of d1
+d1 = d2;                                    // copy d2 into d1 (d1 becomes a copy of d2)
+
+========================================================================================================
+
+### Queue
+
+#include <queue>
+using std::queue;
+
+#### Constructor
+
+queue<int> q1;                // empty queue
+queue<int> q2(q1);            // copy constructor
+
+#### Functions
+
+q1.push(7);                   // add element at end
+q1.pop();                     // remove element from front
+q1.front();                   // access front element
+q1.back();                    // access last element
+q1.size();                    // number of elements
+q1.empty();                   // check if empty
+q1 = q2;                      // copy q2 into q1
+
+========================================================================================================
+
+### Stack
+
+#include <stack>
+using std::stack;
+
+#### Constructor
+
+stack<int> s1;                // empty stack
+stack<int> s2(s1);            // copy constructor
+
+#### Functions
+
+s1.push(7);                   // add element at top
+s1.pop();                     // remove top element
+s1.top();                     // access top element
+s1.size();                    // number of elements
+s1.empty();                   // check if empty
+s1 = s2;                      // copy s2 into s1
+
+========================================================================================================
+
+### Priority Queue
+
+#include <queue>
+using std::priority_queue;
+
+#### Constructor
+
+priority_queue<int> pq1;                            // max-heap (default)
+priority_queue<int, vector<int>, less<int>> pq2;    // max-heap (explicit)
+priority_queue<int, vector<int>, greater<int>> pq3; // min-heap
+priority_queue<int> pq4(pq1);                       // copy constructor
+
+##### Breakdown:
+
+priority_queue<
+    int,              // 1 Type of the elements stored (here: int)
+    std::vector<int>, // 2 The underlying container (defaults to vector)
+    std::greater<int> // 3 The comparator (defaults to std::less<T>)
+>
+
+#### Functions
+
+pq1.push(7);                   // add element
+pq1.pop();                     // remove top element
+pq1.top();                     // access top element
+pq1.size();                    // number of elements
+pq1.empty();                   // check if empty
+pq1 = pq4;                     // copy pq4 into pq1
+
+========================================================================================================

@@ -1,0 +1,264 @@
+# Java Language Documentation
+
+## Data Structure
+
+========================================================================================================
+
+### Array
+
+#### Constructor
+
+int[] arr1 = new int[5];                // uninitialized (default 0)
+int[] arr2 = {1, 2, 3, 4, 5};           // initialized
+
+========================================================================================================
+
+### ArrayList
+
+import java.util.ArrayList;
+
+#### Constructor
+
+ArrayList<Integer> list1 = new ArrayList<>();           // empty list
+ArrayList<Integer> list2 = new ArrayList<>(n);          // initial capacity n
+ArrayList<Integer> list3 = new ArrayList<>(list2);      // copy constructor
+
+#### Functions
+
+list1.add(7);                           // add element at end
+list1.add(0, 10);                       // add element at index 0
+list1.remove(0);                        // remove element at index 0
+list1.remove(Integer.valueOf(7));       // remove first occurrence of 7
+list1.size();                           // get number of elements
+list1.isEmpty();                        // check if empty
+list1.clear();                          // remove all elements
+list1.get(0);                           // access element by index
+list1.set(0, 20);                       // set element at index
+list1.contains(7);                      // check if contains element
+list1.indexOf(7);                       // index of element, -1 if not found
+list1.equals(list2);                    // compare lists
+
+========================================================================================================
+
+### HashMap
+
+import java.util.HashMap;
+
+#### Constructor
+
+HashMap<Integer, Integer> map1 = new HashMap<>();                       // empty map
+HashMap<String, Integer> map2 = new HashMap<>(Map.of("a", 1, "b", 2));  // initialized (Java 9+)
+
+#### Functions
+
+map1.put(key, value);                // insert or update value for key
+map1.get(key);                       // get value at key (null if not found)
+map1.getOrDefault(key, defaultVal);  // get value or default
+map1.containsKey(key);               // check if key exists
+map1.containsValue(value);           // check if value exists
+map1.remove(key);                    // remove key-value pair
+map1.size();                         // number of elements
+map1.isEmpty();                      // check if empty
+map1.clear();                        // remove all elements
+
+#### Iteration
+
+for (Map.Entry<Integer, Integer> entry : map1.entrySet()) {
+    Integer key = entry.getKey();
+    Integer value = entry.getValue();
+    // use key and value
+}
+
+for (Integer key : map1.keySet()) {
+    // use key
+}
+
+for (Integer value : map1.values()) {
+    // use value
+}
+
+========================================================================================================
+
+### TreeMap
+
+import java.util.TreeMap;
+
+#### Constructor
+
+TreeMap<Integer, Integer> map1 = new TreeMap<>();                       // empty map
+TreeMap<String, Integer> map2 = new TreeMap<>(Map.of("a", 1, "b", 2)); // initialized (Java 9+)
+
+#### Functions
+
+map1.put(key, value);                // insert or update value for key
+map1.get(key);                       // get value at key (null if not found)
+map1.getOrDefault(key, defaultVal);  // get value or default
+map1.containsKey(key);               // check if key exists
+map1.containsValue(value);           // check if value exists
+map1.remove(key);                    // remove key-value pair
+map1.size();                         // number of elements
+map1.isEmpty();                      // check if empty
+map1.clear();                        // remove all elements
+map1.firstKey();                     // smallest key
+map1.lastKey();                      // largest key
+map1.ceilingKey(key);                // least key >= key
+map1.floorKey(key);                  // greatest key <= key
+map1.higherKey(key);                 // least key > key
+map1.lowerKey(key);                  // greatest key < key
+
+#### Iteration
+
+for (Map.Entry<Integer, Integer> entry : map1.entrySet()) {
+    Integer key = entry.getKey();
+    Integer value = entry.getValue();
+    // use key and value
+}
+
+========================================================================================================
+
+### HashSet
+
+import java.util.HashSet;
+
+#### Constructor
+
+HashSet<Integer> set1 = new HashSet<>();                  // empty set
+HashSet<String> set2 = new HashSet<>(Set.of("a", "b"));   // initialized (Java 9+)
+
+#### Functions
+
+set1.add(10);                    // insert element
+set1.remove(10);                 // remove element
+set1.contains(10);               // check if element exists
+set1.size();                     // number of elements
+set1.isEmpty();                  // check if empty
+set1.clear();                    // remove all elements
+
+#### Iteration
+
+for (Integer x : set1) {
+    // use x
+}
+
+========================================================================================================
+
+### TreeSet
+
+import java.util.TreeSet;
+
+#### Constructor
+
+TreeSet<Integer> set1 = new TreeSet<>();                  // empty set
+TreeSet<String> set2 = new TreeSet<>(Set.of("a", "b"));   // initialized (Java 9+)
+
+#### Functions
+
+set1.add(10);                    // insert element
+set1.remove(10);                 // remove element
+set1.contains(10);               // check if element exists
+set1.size();                     // number of elements
+set1.isEmpty();                  // check if empty
+set1.clear();                    // remove all elements
+set1.first();                    // smallest element
+set1.last();                     // largest element
+set1.ceiling(10);                // least element >= 10
+set1.floor(10);                  // greatest element <= 10
+set1.higher(10);                 // least element > 10
+set1.lower(10);                  // greatest element < 10
+
+#### Iteration
+
+for (Integer x : set1) {
+    // use x
+}
+
+========================================================================================================
+
+### Deque
+
+import java.util.Deque;
+import java.util.ArrayDeque;
+
+#### Constructor
+
+Deque<Integer> dq1 = new ArrayDeque<>();                  // empty deque
+Deque<Integer> dq2 = new ArrayDeque<>(n);                 // initial capacity n
+
+#### Functions
+
+dq1.addLast(7);                   // add element at end
+dq1.addFirst(8);                  // add element at front
+dq1.removeLast();                 // remove last element
+dq1.removeFirst();                // remove first element
+dq1.size();                       // get number of elements
+dq1.isEmpty();                    // check if empty
+dq1.clear();                      // remove all elements
+dq1.getFirst();                   // first element
+dq1.getLast();                    // last element
+dq1.peekFirst();                  // first element (null if empty)
+dq1.peekLast();                   // last element (null if empty)
+
+========================================================================================================
+
+### Queue
+
+import java.util.Queue;
+import java.util.LinkedList;
+
+#### Constructor
+
+Queue<Integer> q1 = new LinkedList<>();                   // empty queue
+
+#### Functions
+
+q1.add(7);                        // add element at end
+q1.remove();                      // remove element from front
+q1.poll();                        // remove and return front (null if empty)
+q1.peek();                        // access front element (null if empty)
+q1.size();                        // number of elements
+q1.isEmpty();                     // check if empty
+q1.clear();                       // remove all elements
+
+========================================================================================================
+
+### Stack
+
+import java.util.Stack;
+
+#### Constructor
+
+Stack<Integer> s1 = new Stack<>();                        // empty stack
+
+#### Functions
+
+s1.push(7);                        // add element at top
+s1.pop();                          // remove and return top element
+s1.peek();                         // access top element
+s1.size();                         // number of elements
+s1.isEmpty();                      // check if empty
+s1.clear();                        // remove all elements
+
+========================================================================================================
+
+### PriorityQueue
+
+import java.util.PriorityQueue;
+
+#### Constructor
+
+PriorityQueue<Integer> pq1 = new PriorityQueue<>();                             // min-heap (default)
+PriorityQueue<Integer> pq2 = new PriorityQueue<>(Collections.reverseOrder());   // max-heap
+PriorityQueue<Integer> pq3 = new PriorityQueue<>(pq1);                          // copy constructor
+
+#### Functions
+
+pq1.add(7);                         // add element
+pq1.offer(8);                       // add element
+pq1.poll();                         // remove and return top element (null if empty)
+pq1.remove();                       // remove and return top element (throws if empty)
+pq1.peek();                         // access top element (null if empty)
+pq1.size();                         // number of elements
+pq1.isEmpty();                      // check if empty
+pq1.clear();                        // remove all elements
+
+========================================================================================================
