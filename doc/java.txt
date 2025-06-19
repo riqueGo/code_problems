@@ -11,17 +11,31 @@
 int[] arr1 = new int[5];                // uninitialized (default 0)
 int[] arr2 = {1, 2, 3, 4, 5};           // initialized
 
+#### Sorting
+
+// Sort entire array in ascending order
+Arrays.sort(arr1);
+
+// Sort subarray from index 1 (inclusive) to 4 (exclusive)
+Arrays.sort(arr1, 1, 4);
+
+// Sort in descending order (Java 8+)
+Integer[] arr3 = {5, 2, 8};
+Arrays.sort(arr3, Collections.reverseOrder());
+
 ========================================================================================================
 
 ### ArrayList
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 #### Constructor
 
 ArrayList<Integer> list1 = new ArrayList<>();           // empty list
 ArrayList<Integer> list2 = new ArrayList<>(n);          // initial capacity n
 ArrayList<Integer> list3 = new ArrayList<>(list2);      // copy constructor
+ArrayList<Integer> list4 = new ArrayList<>(List.of(1, 2, 3, 4, 5));   // initialized with values (Java 9+)
 
 #### Functions
 
@@ -37,6 +51,14 @@ list1.set(0, 20);                       // set element at index
 list1.contains(7);                      // check if contains element
 list1.indexOf(7);                       // index of element, -1 if not found
 list1.equals(list2);                    // compare lists
+
+#### Sorting
+
+// Sort in ascending order
+Collections.sort(list1);
+
+// Sort in descending order
+Collections.sort(list1, Collections.reverseOrder());
 
 ========================================================================================================
 
