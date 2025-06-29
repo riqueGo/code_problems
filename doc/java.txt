@@ -36,6 +36,7 @@ ArrayList<Integer> list1 = new ArrayList<>();           // empty list
 ArrayList<Integer> list2 = new ArrayList<>(n);          // initial capacity n
 ArrayList<Integer> list3 = new ArrayList<>(list2);      // copy constructor
 ArrayList<Integer> list4 = new ArrayList<>(List.of(1, 2, 3, 4, 5));   // initialized with values (Java 9+)
+ArrayList<Integer> list5 = new ArrayList<>(Collections.nCopies(n, defaultValue)); // size n, all elements = defaultValue
 
 #### Functions
 
