@@ -11,6 +11,10 @@
 int[] arr1 = new int[5];                // uninitialized (default 0)
 int[] arr2 = {1, 2, 3, 4, 5};           // initialized
 
+#### Attributes
+
+int size = arr2.length
+
 #### Sorting
 
 // Sort entire array in ascending order
