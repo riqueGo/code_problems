@@ -279,3 +279,28 @@ pq1.empty();                   // check if empty
 pq1 = pq4;                     // copy pq4 into pq1
 
 ========================================================================================================
+
+### Pair
+
+#include <utility>
+using std::pair;
+
+#### Constructor
+
+pair<int, int> p1;                        // default-initialized (both elements zero-initialized)
+pair<int, int> p2(1, 2);                  // initialized with values
+pair<int, int> p3 = {3, 4};               // brace initialization
+pair<std::string, int> p4("a", 5);        // different types
+
+#### Functions
+
+p1.first;                                 // access first element
+p1.second;                                // access second element
+p1 = p2;                                  // copy p2 into p1
+std::swap(p1, p2);                        // swap contents of p1 and p2
+std::make_pair(10, 20);                   // create a pair (type deduced)
+
+#### Comparison
+
+if (p1 == p2) { /* equal */ }
+if (p1 < p2) { /* lexicographical compare */ }
