@@ -304,3 +304,21 @@ std::make_pair(10, 20);                   // create a pair (type deduced)
 
 if (p1 == p2) { /* equal */ }
 if (p1 < p2) { /* lexicographical compare */ }
+
+========================================================================================================
+
+### Struct
+
+// Define a struct with a constructor
+struct Point {
+    int x;
+    int y;
+    Point(int x_, int y_) : x(x_), y(y_) {} // constructor
+};
+
+// Declare and initialize
+Point p1(1, 2); // initialized with constructor
+
+// Access members
+int a = p1.x;
+int b = p1.y;
