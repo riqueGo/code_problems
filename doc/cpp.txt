@@ -24,6 +24,8 @@ vector<int> v1;                 // empty vector
 vector<int> v2(n);              // vector of size n, default-initialized
 vector<int> v3(n, 0);           // vector of size n, all elements = 0
 vector<int> v4 = {1, 2, 3, 4};  // initializer list
+vector<int> v5(v4);                // copy constructor: v5 is a copy of v4
+vector<int> v6(v4.begin(), v4.end()); // initialize from range (copy all elements of v4)
 
 
 #### Functions
