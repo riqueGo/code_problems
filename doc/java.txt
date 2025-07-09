@@ -289,3 +289,42 @@ pq1.isEmpty();                      // check if empty
 pq1.clear();                        // remove all elements
 
 ========================================================================================================
+
+### LinkedList
+
+import java.util.LinkedList;
+
+#### Constructor
+
+LinkedList<Integer> list1 = new LinkedList<>();                 // empty list
+LinkedList<Integer> list2 = new LinkedList<>(list1);            // copy constructor
+
+#### Functions
+
+list1.add(7);                           // add element at end
+list1.addFirst(10);                     // add element at front
+list1.addLast(20);                      // add element at end
+list1.add(1, 15);                       // add element at index 1
+list1.remove();                         // remove first element
+list1.removeFirst();                    // remove first element
+list1.removeLast();                     // remove last element
+list1.remove(1);                        // remove element at index 1
+list1.remove(Integer.valueOf(7));       // remove first occurrence of 7
+list1.get(0);                           // access element by index
+list1.getFirst();                       // get first element
+list1.getLast();                        // get last element
+list1.set(0, 30);                       // set element at index 0
+list1.size();                           // number of elements
+list1.isEmpty();                        // check if empty
+list1.clear();                          // remove all elements
+list1.contains(7);                      // check if contains element
+list1.indexOf(7);                       // index of element, -1 if not found
+list1.equals(list2);                    // compare lists
+
+#### Iteration
+
+for (Integer x : list1) {
+    // use x
+}
+
+========================================================================================================
