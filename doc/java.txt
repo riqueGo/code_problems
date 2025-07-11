@@ -27,6 +27,14 @@ Arrays.sort(arr1, 1, 4);
 Integer[] arr3 = {5, 2, 8};
 Arrays.sort(arr3, Collections.reverseOrder());
 
+/*
+Sort 2D array (int[][]) by custom comparator (e.g., by first column ascending)
+Arrays.sort(arr2d, Comparator.comparingInt(a -> a[0]));
+
+// Sort by second column descending
+Arrays.sort(arr2d, (a, b) -> Integer.compare(b[1], a[1]));
+*/
+
 ========================================================================================================
 
 ### ArrayList
@@ -56,6 +64,7 @@ list1.set(0, 20);                       // set element at index
 list1.contains(7);                      // check if contains element
 list1.indexOf(7);                       // index of element, -1 if not found
 list1.equals(list2);                    // compare lists
+list1.get(list1.size() - 1);                // get last element
 
 #### Sorting
 
@@ -326,5 +335,53 @@ list1.equals(list2);                    // compare lists
 for (Integer x : list1) {
     // use x
 }
+
+========================================================================================================
+
+### Conversions
+
+========================================================================================================
+
+#### Object to Primitive
+
+Integer obj = 10;
+int val = obj.intValue();           // Integer to int
+double dval = obj.doubleValue();    // Integer to double
+
+Double dobj = 3.14;
+double d = dobj.doubleValue();      // Double to double
+int i = dobj.intValue();            // Double to int
+
+Boolean bobj = true;
+boolean b = bobj.booleanValue();    // Boolean to boolean
+
+========================================================================================================
+
+#### Primitive to Object
+
+int val = 10;
+Integer obj = Integer.valueOf(val);     // int to Integer
+
+double d = 3.14;
+Double dobj = Double.valueOf(d);        // double to Double
+
+boolean b = true;
+Boolean bobj = Boolean.valueOf(b);      // boolean to Boolean
+
+========================================================================================================
+
+#### ArrayList to Array
+
+ArrayList<Integer> list = new ArrayList<>(List.of(1, 2, 3));
+
+// To Integer array
+Integer[] arr = list.toArray(new Integer[0]);
+
+// To int array (Java 8+)
+int[] arr2 = list.stream().mapToInt(Integer::intValue).toArray();
+ArrayList<int[]> listOfArrays = new ArrayList<>();
+
+// ... fill listOfArrays ...
+int[][] arr3 = listOfArrays.toArray(new int[0][]);
 
 ========================================================================================================
