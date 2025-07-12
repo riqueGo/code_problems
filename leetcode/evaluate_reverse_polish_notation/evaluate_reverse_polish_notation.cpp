@@ -1,3 +1,12 @@
+/*
+ * Time Complexity: O(N)
+ *   - N is the number of tokens.
+ *   - Each token is processed once.
+ *
+ * Space Complexity: O(N)
+ *   - Stack can grow up to N/2 in the worst case.
+ */
+
 #include <vector>
 #include <stack>
 #include <string>

@@ -1,3 +1,11 @@
+/*
+ * Time Complexity: O(N + M)
+ *   - N and M are the lengths of the two lists.
+ *
+ * Space Complexity: O(1)
+ *   - If done iteratively, only pointers are used.
+ */
+
 #include<iostream>
 
 struct ListNode {

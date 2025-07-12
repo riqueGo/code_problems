@@ -1,3 +1,12 @@
+/*
+ * Time Complexity: O(N)
+ *   - N is the number of intervals.
+ *   - Each interval is visited at most twice.
+ *
+ * Space Complexity: O(N)
+ *   - For the output array.
+ */
+
 #include<iostream>
 #include<vector>
 #include <algorithm>

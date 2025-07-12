@@ -1,3 +1,12 @@
+/*
+ * Time Complexity: O(N log K)
+ *   - N is the number of points, K is the number to return.
+ *   - Each insertion and removal from the heap is O(log K).
+ *
+ * Space Complexity: O(K)
+ *   - For the heap storing K points.
+ */
+
 #include<vector>
 #include<queue>
 

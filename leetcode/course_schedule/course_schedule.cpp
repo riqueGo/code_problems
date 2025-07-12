@@ -1,3 +1,12 @@
+/*
+ * Time Complexity: O(V + E)
+ *   - V is the number of courses, E is the number of prerequisites.
+ *   - Each node and edge is visited once in DFS.
+ *
+ * Space Complexity: O(V + E)
+ *   - For the adjacency list and visited array.
+ */
+
 #include <vector>
 
 using std::vector;

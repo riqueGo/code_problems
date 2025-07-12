@@ -1,12 +1,10 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
+/*
+ * Time Complexity: O(N)
+ *   - N is the number of nodes in the linked list.
+ *   - Each node is visited once.
+ *
+ * Space Complexity: O(1)
+ *   - Only a constant amount of extra space is used.
  */
 
 struct ListNode {

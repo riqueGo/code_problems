@@ -1,16 +1,17 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
+/*
+ * Time Complexity: O(N)
+ *   - N is the number of nodes in the list.
+ *
+ * Space Complexity: O(1)
+ *   - Uses two pointers only.
  */
+
 struct ListNode {
     int val;
     ListNode *next;
     ListNode(int x) : val(x), next(nullptr) {}
 };
+
 class Solution {
 public:
     bool hasCycle(ListNode *head) {

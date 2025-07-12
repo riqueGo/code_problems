@@ -1,3 +1,13 @@
+/*
+ * Time Complexity:
+ *   - insert: O(L), L is the length of the word.
+ *   - search: O(L)
+ *   - startsWith: O(L)
+ *
+ * Space Complexity: O(N * L)
+ *   - N is the number of words, L is the average length.
+ */
+
 #include <string>
 
 using std::string;

@@ -1,12 +1,13 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
+/*
+ * Time Complexity: O(H)
+ *   - H is the height of the tree.
+ *   - Each recursive call moves down one level of the tree.
+ *
+ * Space Complexity: O(H)
+ *   - Due to the recursion stack.
+ *   - In the worst case (skewed tree), H = N.
  */
+
  struct TreeNode {
     int val;
     TreeNode *left;

@@ -1,3 +1,13 @@
+/*
+ * Time Complexity: O(N^2)
+ *   - N is the number of elements in the array.
+ *   - Sorting is O(N log N), and for each element, a two-pointer scan is O(N).
+ *
+ * Space Complexity: O(M)
+ *   - M is the number of unique triplets in the answer.
+ *   - Additional space for sorting is O(1) or O(N) depending on implementation.
+ */
+
 #include <vector>
 #include<algorithm>
 

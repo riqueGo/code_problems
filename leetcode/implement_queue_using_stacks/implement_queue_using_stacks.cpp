@@ -1,3 +1,12 @@
+/*
+ * Time Complexity:
+ *   - push: O(1)
+ *   - pop, peek: Amortized O(1)
+ *
+ * Space Complexity: O(N)
+ *   - N is the number of elements in the queue.
+ */
+
 #include<stack>
 
 using std::stack;

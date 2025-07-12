@@ -1,3 +1,13 @@
+/*
+ * Time Complexity: O(N)
+ *   - N is the length of the longer input string.
+ *   - Each character is processed once, and the result is reversed at the end (also O(N)).
+ *
+ * Space Complexity: O(N)
+ *   - The result string can be at most N+1 in length (for a possible carry).
+ *   - Additional space for leading zeros is also O(N).
+ */
+
 #include<string>
 #include<algorithm>
 

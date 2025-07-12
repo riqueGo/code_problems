@@ -1,3 +1,11 @@
+/*
+ * Time Complexity: O(N)
+ *   - N is the length of the string.
+ *
+ * Space Complexity: O(1)
+ *   - Fixed-size array for character counts.
+ */
+
 #include <string>
 
 using std::string;

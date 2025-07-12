@@ -1,3 +1,11 @@
+/*
+ * Time Complexity: O(N)
+ *   - N is the length of the string.
+ *
+ * Space Complexity: O(1)
+ *   - Only pointers and a few variables are used.
+ */
+
 #include<iostream>
 #include<string>
 

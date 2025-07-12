@@ -1,3 +1,12 @@
+/*
+ * Time Complexity: O(N)
+ *   - N is the number of days (prices).
+ *   - Each price is visited once.
+ *
+ * Space Complexity: O(1)
+ *   - Only a constant amount of extra space is used.
+ */
+
 #include<iostream>
 #include<vector>
 

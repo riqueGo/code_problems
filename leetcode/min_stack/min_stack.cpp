@@ -1,3 +1,11 @@
+/*
+ * Time Complexity:
+ *   - push, pop, top, getMin: O(1)
+ *
+ * Space Complexity: O(N)
+ *   - N is the number of elements in the stack.
+ */
+
 #include <stack>
 #include <utility>
 #include <algorithm>

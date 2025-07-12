@@ -1,3 +1,13 @@
+/*
+ * Time Complexity: O(2^T * K)
+ *   - T is the target value, K is the average length of each combination.
+ *   - In the worst case, the number of combinations is exponential in T.
+ *
+ * Space Complexity: O(T)
+ *   - The recursion stack can go as deep as T.
+ *   - Additional space for storing the answer.
+ */
+
 #include<vector>
 #include<algorithm>
 

@@ -1,3 +1,11 @@
+/*
+ * Time Complexity: O(N * M)
+ *   - N is the number of rows, M is the number of columns.
+ *
+ * Space Complexity: O(N * M)
+ *   - For the queue and visited matrix.
+ */
+
 #include<vector>
 #include<queue>
 #include <climits>

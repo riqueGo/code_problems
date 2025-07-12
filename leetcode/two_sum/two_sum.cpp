@@ -1,3 +1,11 @@
+/*
+ * Time Complexity: O(N)
+ *   - N is the length of the array.
+ *
+ * Space Complexity: O(N)
+ *   - For the hash map.
+ */
+
 #include<iostream>
 #include<vector>
 #include<unordered_map>

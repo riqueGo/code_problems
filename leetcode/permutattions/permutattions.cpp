@@ -1,3 +1,11 @@
+/*
+ * Time Complexity: O(N * N!)
+ *   - N is the number of elements.
+ *
+ * Space Complexity: O(N)
+ *   - For the recursion stack and current permutation.
+ */
+
 #include <vector>
 
 using std::vector;

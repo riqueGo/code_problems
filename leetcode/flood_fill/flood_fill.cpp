@@ -1,3 +1,12 @@
+/*
+ * Time Complexity: O(N)
+ *   - N is the number of pixels in the image.
+ *   - Each pixel is visited at most once.
+ *
+ * Space Complexity: O(N)
+ *   - Due to recursion stack or queue in BFS/DFS.
+ */
+
 #include<iostream>
 #include<vector>
 

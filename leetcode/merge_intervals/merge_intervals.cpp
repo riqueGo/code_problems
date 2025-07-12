@@ -1,3 +1,12 @@
+/*
+ * Time Complexity: O(N log N)
+ *   - N is the number of intervals.
+ *   - Sorting dominates the complexity.
+ *
+ * Space Complexity: O(N)
+ *   - For the output array.
+ */
+
 #include <vector>
 #include <algorithm>
 

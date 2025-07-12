@@ -1,3 +1,12 @@
+/*
+ * Time Complexity: O(N)
+ *   - N is the length of the string.
+ *   - Each character is visited at most twice.
+ *
+ * Space Complexity: O(1)
+ *   - Size of the character set (constant, 256 for ASCII).
+ */
+
 #include <string>
 #include <algorithm>
 

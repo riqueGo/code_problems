@@ -1,8 +1,10 @@
 /*
- * Time Complexity: O(N), where N is the number of nodes in the tree.
- *   - Each node is visited once by the dfs traversal.
- * Space Complexity: O(H), where H is the height of the tree.
- *   - Due to the recursion stack. In the worst case (skewed tree), H = N, so space is O(N).
+ * Time Complexity: O(N)
+ *   - Each node is visited once in the recursion.
+ *
+ * Space Complexity: O(H)
+ *   - H is the height of the tree (recursion stack).
+ *   - In the worst case (skewed tree), H = N, so space is O(N).
  *   - In a balanced tree, H = log N.
  */
 

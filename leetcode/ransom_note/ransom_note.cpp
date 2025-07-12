@@ -1,3 +1,11 @@
+/*
+ * Time Complexity: O(N + M)
+ *   - N is the length of ransomNote, M is the length of magazine.
+ *
+ * Space Complexity: O(1)
+ *   - Fixed-size array for character counts.
+ */
+
 #include <string>
 
 using std::string;

@@ -1,3 +1,11 @@
+/*
+ * Time Complexity: O(N)
+ *   - Each element is inserted and checked in the set once.
+ *
+ * Space Complexity: O(N)
+ *   - In the worst case, all elements are unique and stored in the set.
+ */
+
 #include<unordered_set>
 #include<vector>
 

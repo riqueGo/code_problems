@@ -1,3 +1,11 @@
+/*
+ * Time Complexity: O(N)
+ *   - N is the length of the string.
+ *
+ * Space Complexity: O(N)
+ *   - For the stack.
+ */
+
 #include<iostream>
 #include<unordered_map>
 #include<string>

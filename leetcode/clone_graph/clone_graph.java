@@ -1,10 +1,10 @@
 package clone_graph;
 
 import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Queue;
 
-/*
-// Definition for a Node.
 class Node {
     public int val;
     public List<Node> neighbors;
@@ -21,7 +21,6 @@ class Node {
         neighbors = _neighbors;
     }
 }
-*/
 
 class Solution {
     public Node cloneGraph(Node node) {

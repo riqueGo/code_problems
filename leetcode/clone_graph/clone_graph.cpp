@@ -1,3 +1,12 @@
+/*
+ * Time Complexity: O(N + E)
+ *   - N is the number of nodes, E is the number of edges.
+ *   - Each node and edge is visited once.
+ *
+ * Space Complexity: O(N)
+ *   - For the mapping and visited arrays.
+ */
+
 #include<vector>
 #include<unordered_map>
 #include<unordered_set>
@@ -7,27 +16,6 @@ using std::vector;
 using std::unordered_map;
 using std::unordered_set;
 using std::queue;
-
-/*
-// Definition for a Node.
-class Node {
-public:
-    int val;
-    vector<Node*> neighbors;
-    Node() {
-        val = 0;
-        neighbors = vector<Node*>();
-    }
-    Node(int _val) {
-        val = _val;
-        neighbors = vector<Node*>();
-    }
-    Node(int _val, vector<Node*> _neighbors) {
-        val = _val;
-        neighbors = _neighbors;
-    }
-};
-*/
 
 class Node {
 public:

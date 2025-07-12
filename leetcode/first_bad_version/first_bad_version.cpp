@@ -1,3 +1,12 @@
+/*
+ * Time Complexity: O(log N)
+ *   - N is the number of versions.
+ *   - Each iteration halves the search space.
+ *
+ * Space Complexity: O(1)
+ *   - Only a constant amount of extra space is used.
+ */
+
 // The API isBadVersion is defined for you.
 // bool isBadVersion(int version);
 

@@ -1,3 +1,12 @@
+/*
+ * Time Complexity: O(S * N)
+ *   - S is the amount, N is the number of coins.
+ *   - For each amount up to S, we check all N coins.
+ *
+ * Space Complexity: O(S)
+ *   - For the dp array of size amount+1.
+ */
+
 #include <vector>
 #include <algorithm>
 #include <climits>
