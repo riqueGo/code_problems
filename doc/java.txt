@@ -76,6 +76,60 @@ Collections.sort(list1, Collections.reverseOrder());
 
 ========================================================================================================
 
+### List
+
+import java.util.List;
+import java.util.Collections;
+
+#### Constructor
+
+List<Integer> list1 = new ArrayList<>();                        // empty list (most common)
+List<Integer> list2 = List.of(1, 2, 3, 4, 5);                   // immutable list (Java 9+)
+List<Integer> list3 = Arrays.asList(1, 2, 3);                   // fixed-size list backed by array
+
+#### Functions
+
+list1.add(7);                           // add element at end
+list1.add(0, 10);                       // add element at index 0
+list1.remove(0);                        // remove element at index 0
+list1.remove(Integer.valueOf(7));       // remove first occurrence of 7
+list1.size();                           // get number of elements
+list1.isEmpty();                        // check if empty
+list1.clear();                          // remove all elements
+list1.get(0);                           // access element by index
+list1.set(0, 20);                       // set element at index
+list1.contains(7);                      // check if contains element
+list1.indexOf(7);                       // index of element, -1 if not found
+list1.equals(list2);                    // compare lists
+list1.get(list1.size() - 1);            // get last element
+list1.subList(1, 3);                    // get sublist from index 1 (inclusive) to 3 (exclusive)
+
+#### Iteration
+
+for (Integer x : list1) {
+    // use x
+}
+
+#### Sorting
+
+// Sort in ascending order
+Collections.sort(list1);
+
+// Sort in descending order
+Collections.sort(list1, Collections.reverseOrder());
+
+#### Join
+
+import java.util.List;
+
+// Join elements of an array or collection into a single String (Java 8+)
+String joined = String.join(", ", "a", "b", "c"); // "a, b, c"
+
+List<String> list = List.of("apple", "banana", "cherry");
+String result = String.join(" | ", list); // "apple | banana | cherry"
+
+========================================================================================================
+
 ### HashMap
 
 import java.util.HashMap;
