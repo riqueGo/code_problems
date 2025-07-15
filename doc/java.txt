@@ -1,5 +1,68 @@
 # Java Language Documentation
 
+## Popular Objects
+
+========================================================================================================
+
+### String
+
+import java.lang.String;
+
+#### Constructor
+
+String s1 = "hello";                        // literal
+String s2 = new String("world");            // new object
+String s3 = String.valueOf(123);            // from int
+
+#### Functions
+
+s1.length();                                // length of string
+s1.charAt(0);                               // character at index
+s1.substring(1, 4);                         // substring from index 1 (inclusive) to 4 (exclusive)
+s1.indexOf("lo");                           // index of substring, -1 if not found
+s1.lastIndexOf("l");                        // last index of substring
+s1.startsWith("he");                        // check prefix
+s1.endsWith("lo");                          // check suffix
+s1.contains("el");                          // check if contains substring
+s1.equals(s2);                              // compare strings
+s1.equalsIgnoreCase(s2);                    // compare ignoring case
+s1.isEmpty();                               // check if empty
+s1.toUpperCase();                           // convert to uppercase
+s1.toLowerCase();                           // convert to lowercase
+s1.trim();                                  // remove leading/trailing whitespace
+s1.replace("l", "x");                       // replace all occurrences
+s1.split(",");                              // split by delimiter, returns String[]
+String.join("-", "a", "b", "c");            // join strings with delimiter
+
+#### Conversion
+
+String.valueOf(123);                        // int to String
+Integer.parseInt("123");                    // String to int
+Double.parseDouble("3.14");                 // String to double
+
+========================================================================================================
+
+### Integer
+
+import java.lang.Integer;
+
+#### Constructor
+
+Integer i1 = 10;                            // autoboxing
+Integer i2 = Integer.valueOf(20);           // from int
+Integer i3 = Integer.parseInt("30");        // from String
+
+#### Functions
+
+i1.intValue();                              // get int value
+i1.compareTo(i2);                           // compare two Integers
+Integer.max(i1, i2);                        // max of two Integers
+Integer.min(i1, i2);                        // min of two Integers
+Integer.toString(i1);                       // Integer to String
+Integer.parseInt("123");                    // String to int
+
+========================================================================================================
+
 ## Data Structure
 
 ========================================================================================================

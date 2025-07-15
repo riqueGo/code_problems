@@ -1,5 +1,55 @@
 # C++ Language Documentation
 
+## Popular Types
+
+========================================================================================================
+
+### int
+
+// Declaration and initialization
+int a;           // uninitialized
+int b = 5;       // initialized
+
+// Operations
+int c = a + b;   // addition
+int d = a * b;   // multiplication
+int e = a / b;   // division
+int f = a % b;   // modulo
+
+// Limits
+#include <limits>
+int maxInt = std::numeric_limits<int>::max();
+int minInt = std::numeric_limits<int>::min();
+
+========================================================================================================
+
+### string
+
+#include <string>
+using std::string;
+
+// Declaration and initialization
+string s1;                   // empty string
+string s2 = "hello";         // initialized
+string s3(s2);               // copy constructor
+
+// Operations
+s1 += "world";               // append
+s1.size();                   // length of string
+s1.empty();                  // check if empty
+s1.clear();                  // remove all characters
+s1.substr(0, 3);             // substring from index 0, length 3
+s1.find("lo");               // find substring, returns index or string::npos
+s1.replace(0, 2, "hi");      // replace from index 0, length 2, with "hi"
+s1 == s2;                    // compare strings
+
+// Iteration
+for (char c : s1) {
+    // use c
+}
+
+========================================================================================================
+
 ## Data Structure
 
 ========================================================================================================
