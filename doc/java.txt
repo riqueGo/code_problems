@@ -32,6 +32,7 @@ s1.toLowerCase();                           // convert to lowercase
 s1.trim();                                  // remove leading/trailing whitespace
 s1.replace("l", "x");                       // replace all occurrences
 s1.split(",");                              // split by delimiter, returns String[]
+s1.isEmpty();                               // returns true if s1 has length 0
 String.join("-", "a", "b", "c");            // join strings with delimiter
 
 #### Conversion
