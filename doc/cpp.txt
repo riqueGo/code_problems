@@ -41,6 +41,7 @@ s1.clear();                  // remove all characters
 s1.substr(0, 3);             // substring from index 0, length 3
 s1.find("lo");               // find substring, returns index or string::npos
 s1.replace(0, 2, "hi");      // replace from index 0, length 2, with "hi"
+s2.pop_back();               // remove last character
 s1 == s2;                    // compare strings
 
 // Iteration
