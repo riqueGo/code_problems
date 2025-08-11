@@ -172,6 +172,7 @@ using std::unordered_set;
 
 unordered_set<int> s1;                      // empty set
 unordered_set<std::string> s2 = {"a", "b"}; // initializer list
+unordered_set<std::string> s2 = {vec.begin(), vec.end()}; // initializer with vector iterator
 
 #### Functions
 
