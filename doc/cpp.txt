@@ -378,9 +378,9 @@ int a = p1.x;
 int b = p1.y;
 ========================================================================================================
 
-### Custom Sort
+## Sort
 
-#### Sorting a vector of intervals (vector<vector<int>>)
+### Sorting a vector of intervals (vector<vector<int>>)
 
 Suppose you have:
 vector<vector<int>> intervals = {{1,3},{2,6},{8,10},{15,18}};
@@ -395,7 +395,7 @@ std::sort(intervals.begin(), intervals.end(),
     }
 );
 
-#### Sorting with a custom comparator (struct or function)
+### Sorting with a custom comparator (struct or function)
 
 struct CompareBySecond {
     bool operator()(const vector<int>& a, const vector<int>& b) const {
@@ -404,7 +404,7 @@ struct CompareBySecond {
 };
 std::sort(intervals.begin(), intervals.end(), CompareBySecond());
 
-#### Sorting a vector of pairs
+### Sorting a vector of pairs
 
 vector<pair<int, int>> v = {{2, 3}, {1, 4}, {2, 2}};
 std::sort(v.begin(), v.end()); // sorts by first, then second
