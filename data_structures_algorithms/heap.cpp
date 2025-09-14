@@ -38,10 +38,10 @@ private:
 
     // Heapify down: fix heap property starting from index i downwards
     void heapifyDown(int i) {
-        int n = heap.size(), smallest, left, right;
+        int n = heap.size(), smallest = i, left, right;
         
         do {
-            smallest = i;
+            i = smallest;
             left = 2*i+1;
             right = 2*i+2;
 
@@ -49,7 +49,6 @@ private:
             if(right < n && heap[right] < heap[smallest]) smallest = right;
 
             if(smallest != i) swap(heap[smallest], heap[i]);
-            i = smallest;
         } while (smallest != i);
     }
 
@@ -113,6 +112,10 @@ int main() {
     h.insert(30);
     h.insert(2);
     h.insert(8);
+    h.insert(7);
+    h.insert(13);
+    h.insert(4);
+    h.insert(3);
 
     cout << "Heap after insertions: ";
     h.printHeap();
